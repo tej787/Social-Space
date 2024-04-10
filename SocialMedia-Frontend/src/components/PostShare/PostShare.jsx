@@ -10,7 +10,7 @@ import {useDispatch, useSelector } from "react-redux";
 import { uploadImage, uploadPost } from "../../actions/UploadActions";
 import { message } from 'antd'
 import { logout } from "../../actions/AuthAction";
-const serverUsersPublic = "http://localhost:8000/images/users/";
+const serverUsersPublic = "https://social-space-backend-nl0z.onrender.com/images/users/";
 
 
 
