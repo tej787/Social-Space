@@ -1,4 +1,6 @@
 SocialMedia-Backend/node_modules/
 SocialMedia-Backend/*.env
-SocialMedia-Frontend/node_modules
+SocialMedia-Frontend/node_modules/
+SocialMedia-Frontend/package-lock.json
+
 SocialMedia-Socket/node_modules
