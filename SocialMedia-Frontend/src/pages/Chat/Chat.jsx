@@ -48,7 +48,7 @@ const Chat = () => {
     }, [user._id,modalVisible]);
 
     useEffect(() => {
-        socket.current = io("ws://localhost:8800");
+        socket.current = io("ws://https://socialmedia-socket-fon3.onrender.com");
         socket.current.emit("new-user-add", user._id);
         socket.current.on("get-users", (users) => {
             setOnlineUsers(users);
