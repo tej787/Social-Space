@@ -56,7 +56,7 @@ const signToken = id => {
         lastname
     });
   
-    const url = `http://localhost:3000/profile/${newUser._id}`;
+    const url = `https://social-space-atyt.onrender.com/profile/${newUser._id}`;
   
     
     //try to implement it later
