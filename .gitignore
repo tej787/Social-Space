@@ -1,0 +1,4 @@
+SocialMedia-Backend/node_modules/
+SocialMedia-Backend/*.env
+SocialMedia-Frontend/node_modules
+SocialMedia-Socket/node_modules
