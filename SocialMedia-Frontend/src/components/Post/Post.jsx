@@ -6,7 +6,7 @@ import Heart from '../../img/like.png';
 import NotLike from '../../img/notlike.png';
 import { useSelector } from 'react-redux';
 import { likePost } from '../../api/PostsRequest';
-const serverUsersPublic = "http://localhost:8000/images/users/";
+const serverUsersPublic = "https://socialmedia-ci6v.onrender.com/images/users/";
 
 const ImagePopup = ({ src, onClose }) => (
   <div className="image-popup" onClick={onClose}>
@@ -57,7 +57,7 @@ const Post = ({ data, location }) => {
 
 
       {data.image && (<img
-        src={data.image ? "http://localhost:8000/images/posts/" + data.image : ""}
+        src={data.image ? "https://socialmedia-ci6v.onrender.com/images/posts/" + data.image : ""}
         alt=""
         onClick={() => setIsPopupOpen(true)}
       />)
@@ -66,7 +66,7 @@ const Post = ({ data, location }) => {
 
       {isPopupOpen && (
         <ImagePopup
-          src={data.image ? "http://localhost:8000/images/posts/" + data.image : ""}
+          src={data.image ? "https://socialmedia-ci6v.onrender.com/images/posts/" + data.image : ""}
           onClose={() => setIsPopupOpen(false)}
         />
       )}

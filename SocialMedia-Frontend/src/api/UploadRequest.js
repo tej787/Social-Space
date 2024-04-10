@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-const API = axios.create({ baseURL: 'http://localhost:8000',
+const API = axios.create({ baseURL: 'https://socialmedia-ci6v.onrender.com',
 withCredentials: true, // Include cookies with cross-site requests (if needed)
   headers: {
     'Content-Type': 'application/json', // Default content type for sending data

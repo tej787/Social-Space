@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import { getUser, getme } from "../../api/UserRquest";
 import { getUserPosts } from "../../api/PostsRequest";
 import { logout } from "../../actions/AuthAction";
-const serverUsersPublic = "http://localhost:8000/images/users/";
+const serverUsersPublic = "https://socialmedia-ci6v.onrender.com/images/users/";
 
 const ProfileCard = ({location}) => {
   const dispatch = useDispatch();

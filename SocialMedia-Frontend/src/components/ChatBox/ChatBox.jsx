@@ -11,7 +11,7 @@ import { deleteChat } from "../../api/ChatRequest";
 import { message as MSG } from 'antd';
 
 
-const serverUsersPublic = "http://localhost:8000/images/users/";
+const serverUsersPublic = "https://socialmedia-ci6v.onrender.com/images/users/";
 
 
 const ChatBox = ({ chat, currentUser, setSendMessage, receivedMessage }) => {

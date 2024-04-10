@@ -14,7 +14,7 @@ import NavIcons from "../../components/NavIcon/NavIcon";
 import Conversation from "../../components/Conversation/Conversation";
 import { Modal, Input, message } from "antd";
 import { getAllUser } from "../../api/UserRquest";
-const serverUsersPublic = "http://localhost:8000/images/users/";
+const serverUsersPublic = "https://socialmedia-ci6v.onrender.com/images/users/";
 
 
 const Chat = () => {
