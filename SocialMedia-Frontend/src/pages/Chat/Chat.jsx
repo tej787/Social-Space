@@ -14,7 +14,7 @@ import NavIcons from "../../components/NavIcon/NavIcon";
 import Conversation from "../../components/Conversation/Conversation";
 import { Modal, Input, message } from "antd";
 import { getAllUser } from "../../api/UserRquest";
-const serverUsersPublic = "https://socialmedia-ci6v.onrender.com/images/users/";
+const serverUsersPublic = "http://localhost:8000/images/users/";
 
 
 const Chat = () => {
@@ -48,7 +48,7 @@ const Chat = () => {
     }, [user._id,modalVisible]);
 
     useEffect(() => {
-        socket.current = io("ws://https://socialmedia-socket-fon3.onrender.com");
+        socket.current = io("ws://localhost:8800");
         socket.current.emit("new-user-add", user._id);
         socket.current.on("get-users", (users) => {
             setOnlineUsers(users);

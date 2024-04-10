@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getUser } from "../../api/UserRquest";
 import { logout } from "../../actions/AuthAction";
-const serverUsersPublic = "https://socialmedia-ci6v.onrender.com/images/users/";
+const serverUsersPublic = "http://localhost:8000/images/users/";
 
 const Conversation = ({ data, currentUser, online }) => {
 
