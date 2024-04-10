@@ -42,7 +42,7 @@ exports.updateMe = catchAsync(async (req, res, next) => {
         return next(
           new AppError(
             'The user Id does not exist',
-            401
+            403
           )
         );
       }
@@ -81,7 +81,7 @@ exports.followUser = catchAsync(async (req, res,next) => {
         return next(
           new AppError(
             'The user Id does not exist',
-            401
+            403
           )
         );
       }
@@ -128,7 +128,7 @@ exports.unfollowUser = catchAsync(async (req, res,next) => {
                 return next(
                   new AppError(
                     'The user Id does not exist',
-                    401
+                    403
                   )
                 );
               }

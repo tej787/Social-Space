@@ -14,7 +14,7 @@ exports.addMessage = catchAsync(async (req, res, next) => {
       return next(
         new AppError(
           'Chat Id Not Exist Or Chat already delete by other user',
-          401
+          403
         )
       );
     }
