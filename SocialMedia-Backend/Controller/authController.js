@@ -200,7 +200,7 @@ const signToken = id => {
   
     // 3) Send it to user's email
     try {
-      const resetURL = `http://localhost:3000/resetPassword/${resetToken}`;
+      const resetURL = `http://localhost:/resetPassword/${resetToken}`;
       await new Email(user, resetURL).sendPasswordReset();
   
       res.status(200).json({

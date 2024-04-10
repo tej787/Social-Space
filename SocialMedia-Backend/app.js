@@ -33,7 +33,7 @@ app.use(express.static('public'))
 app.use('/images', express.static("images"))
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://social-space-atyt.onrender.com',
   credentials: true
 }));
 
