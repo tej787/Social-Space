@@ -6,7 +6,7 @@ import Heart from '../../img/like.png';
 import NotLike from '../../img/notlike.png';
 import { useSelector } from 'react-redux';
 import { likePost } from '../../api/PostsRequest';
-const serverUsersPublic = "https://social-space-backend-nl0z.onrender.com/images/users/";
+const serverUsersPublic = "https://social-space-backend-ekln.onrender.com/images/users/";
 
 const ImagePopup = ({ src, onClose }) => (
   <div className="image-popup" onClick={onClose}>
@@ -57,7 +57,7 @@ const Post = ({ data, location }) => {
 
 
       {data.image && (<img
-        src={data.image ? "https://social-space-backend-nl0z.onrender.com/images/posts/" + data.image : ""}
+        src={data.image ? "https://social-space-backend-ekln.onrender.com/images/posts/" + data.image : ""}
         alt=""
         onClick={() => setIsPopupOpen(true)}
       />)
@@ -66,7 +66,7 @@ const Post = ({ data, location }) => {
 
       {isPopupOpen && (
         <ImagePopup
-          src={data.image ? "https://social-space-backend-nl0z.onrender.com/images/posts/" + data.image : ""}
+          src={data.image ? "https://social-space-backend-ekln.onrender.com/images/posts/" + data.image : ""}
           onClose={() => setIsPopupOpen(false)}
         />
       )}

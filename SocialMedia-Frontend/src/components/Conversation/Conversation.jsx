@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getUser } from "../../api/UserRquest";
 import { logout } from "../../actions/AuthAction";
-const serverUsersPublic = "https://social-space-backend-nl0z.onrender.com/images/users/";
+const serverUsersPublic = "https://social-space-backend-ekln.onrender.com/images/users/";
 
 const Conversation = ({ data, currentUser, online }) => {
 

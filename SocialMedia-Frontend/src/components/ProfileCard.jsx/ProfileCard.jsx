@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import { getUser, getme } from "../../api/UserRquest";
 import { getUserPosts } from "../../api/PostsRequest";
 import { logout } from "../../actions/AuthAction";
-const serverUsersPublic = "https://social-space-backend-nl0z.onrender.com/images/users/";
+const serverUsersPublic = "https://social-space-backend-ekln.onrender.com/images/users/";
 
 const ProfileCard = ({location}) => {
   const dispatch = useDispatch();

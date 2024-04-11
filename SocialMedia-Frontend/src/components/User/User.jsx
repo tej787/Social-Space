@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { followUser, unfollowUser } from '../../actions/UserAction';
 import { Link } from 'react-router-dom';
 
-const serverUsersPublic = "https://social-space-backend-nl0z.onrender.com/images/users/";
+const serverUsersPublic = "https://social-space-backend-ekln.onrender.com/images/users/";
 
 function User({ person }) {
     const { user } = useSelector((state) => state.authReducer.authData);
