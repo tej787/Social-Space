@@ -9,9 +9,9 @@ export const uploadImage = (data) => async (dispatch) => {
   } catch (error) {
     console.log(error.response.data);
     message.error(error.response.data.message);
-    // if (error.response.status === 401 || error.response.data.error.name === 'JsonWebTokenError') {
-    //   dispatch(logout())
-    // }
+    if (error.response.status === 401 || error.response.data.error.name === 'JsonWebTokenError') {
+      dispatch(logout())
+    }
   }
 };
 
@@ -26,9 +26,9 @@ export const uploadPost = (data) => async (dispatch) => {
     console.log(error.response.data);
     message.error(error.response.data.message);
       dispatch({ type: "UPLOAD_FAIL" });
-      // if (error.response.status === 401 || error.response.data.error.name === 'JsonWebTokenError') {
-      //   dispatch(logout())
-      // }
+      if (error.response.status === 401 || error.response.data.error.name === 'JsonWebTokenError') {
+        dispatch(logout())
+      }
   }
 };
 
