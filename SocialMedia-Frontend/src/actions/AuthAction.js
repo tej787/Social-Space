@@ -29,9 +29,9 @@ export const signUp = (formData, navigate) => async (dispatch) => {
     message.error(error.response.data.message);
     console.log(error.response.data);
     dispatch({ type: "AUTH_FAIL" });
-    if (error.response.status === 401 || error.response.data.error.name === 'JsonWebTokenError') {
-      dispatch(logout())
-    }
+    // if (error.response.status === 401 || error.response.data.error.name === 'JsonWebTokenError') {
+    //   dispatch(logout())
+    // }
   }
 };
 
@@ -60,9 +60,9 @@ export const forgotPassword = (data) => async (dispatch) => {
   } catch (error) {
     console.log(error.response.data);
     message.error(error.response.data.message);
-    if (error.response.status === 401 || error.response.data.error.name === 'JsonWebTokenError') {
-      dispatch(logout())
-    }
+    // if (error.response.status === 401 || error.response.data.error.name === 'JsonWebTokenError') {
+    //   dispatch(logout())
+    // }
   }
 };
 export const resetPassword = (formData) => async (dispatch) => {

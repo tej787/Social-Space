@@ -95,6 +95,7 @@ const signToken = id => {
   
   exports.protect = catchAsync(async (req, res, next) => {
     // 1) Getting token and check of it's there
+    console.log(req.cookies.jwt)
     let token;
     if (
       req.headers.authorization &&

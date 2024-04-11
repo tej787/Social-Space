@@ -11,8 +11,8 @@ export const getTimelinePosts = () => async (dispatch) => {
     console.log(error.response.data);
     message.error(error.response.data.message);
     dispatch({ type: "RETREIVING_FAIL" });
-    if (error.response.status === 401 || error.response.data.error.name === 'JsonWebTokenError') {
-      dispatch(logout())
-    }
+    // if (error.response.status === 401 || error.response.data.error.name === 'JsonWebTokenError') {
+    //   dispatch(logout())
+    // }
   }
 };

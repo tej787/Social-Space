@@ -30,10 +30,10 @@ const Posts = ({ location }) => {
     }
     catch(error){
 
-      if(error.response.status === 401||error.response.data.error.name==='JsonWebTokenError' )
-      {
-        dispatch(logout())
-      }
+      // if(error.response.status === 401||error.response.data.error.name==='JsonWebTokenError' )
+      // {
+      //   dispatch(logout())
+      // }
       console.log(error)
     }
     }
