@@ -47,9 +47,9 @@ const Chat = () => {
         getChats();
     }, [user._id, modalVisible]);
 
-    socket.current = io("wss://social-space-socket.onrender.com");
+    socket.current = io("wss://social-space-socket-yo4t.onrender.com");
     useEffect(() => {
-        socket.current = io("wss://social-space-socket.onrender.com");
+        socket.current = io("wss://social-space-socket-yo4t.onrender.com");
         socket.current.emit("new-user-add", user._id);
         socket.current.on("get-users", (users) => {
             setOnlineUsers(users);
