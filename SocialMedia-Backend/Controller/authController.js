@@ -23,8 +23,8 @@ const signToken = id => {
       expires: new Date(
         Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
       ),
-      httpOnly: false,
-      secure: false,
+      httpOnly: true,
+      secure: true,
       sameSite: 'none'
     });
 
@@ -95,7 +95,7 @@ const signToken = id => {
   
   exports.protect = catchAsync(async (req, res, next) => {
     // 1) Getting token and check of it's there
-    console.log(req.cookies)
+    console.log(req.cookies.jwt)
     let token;
     if (
       req.headers.authorization &&
