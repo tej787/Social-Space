@@ -65,10 +65,10 @@ export const forgotPassword = (data) => async (dispatch) => {
     // }
   }
 };
-export const resetPassword = (formData) => async (dispatch) => {
+export const resetPassword = (token,formData) => async (dispatch) => {
   dispatch({ type: "AUTH_START" });
   try {
-    const { data } = await AuthApi.logIn(formData);
+    const { data } = await AuthApi.resetPassword(token,formData);
     console.log(data);
     message.success("Login Successful");
     dispatch({ type: "AUTH_SUCCESS", data: data });
