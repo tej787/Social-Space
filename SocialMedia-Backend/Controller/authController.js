@@ -56,7 +56,7 @@ const signToken = id => {
         lastname
     });
   
-    const url = `https://social-space-atyt.onrender.com/profile/${newUser._id}`;
+    const url = `${process.env.FrontEndURL}/profile/${newUser._id}`;
   
     
     //try to implement it later
@@ -200,7 +200,7 @@ const signToken = id => {
   
     // 3) Send it to user's email
     try {
-      const resetURL = `http://localhost:/resetPassword/${resetToken}`;
+      const resetURL = `${process.env.FrontEndURL}/resetPassword/${resetToken}`;
       await new Email(user, resetURL).sendPasswordReset();
   
       res.status(200).json({

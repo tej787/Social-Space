@@ -33,7 +33,7 @@ app.use(express.static('public'))
 app.use('/images', express.static("images"))
 
 
-var allowedOrigins = ['https://social-space-atyt.onrender.com', 'http://localhost:3000'];
+var allowedOrigins = [process.env.FrontEndURL, 'http://localhost:3000'];
 
 app.use(cors({
   origin: function(origin, callback){

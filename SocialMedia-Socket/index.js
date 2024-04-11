@@ -1,6 +1,10 @@
+const dotenv = require('dotenv');
+
+dotenv.config();
+
 const io = require("socket.io")(8800, {
   cors: {
-    origin: ["https://social-space-atyt.onrender.com", "http://localhost:3000"],
+    origin: [process.env.FrontEndURL, "http://localhost:3000"],
   },
 });
 
