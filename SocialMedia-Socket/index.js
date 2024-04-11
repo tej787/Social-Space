@@ -1,8 +1,9 @@
 const io = require("socket.io")(8800, {
-    cors: {
-      origin: "https://social-space-atyt.onrender.com",
-    },
-  });
+  cors: {
+    origin: ["https://social-space-atyt.onrender.com", "http://localhost:3000"],
+  },
+});
+
 
   let activeUsers = [];
 

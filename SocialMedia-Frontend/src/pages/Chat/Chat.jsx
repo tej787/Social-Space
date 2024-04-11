@@ -34,7 +34,7 @@ const Chat = () => {
 
     useEffect(() => {
         document.title = 'Social Space || Chats';
-      }, []);
+    }, []);
     useEffect(() => {
         const getChats = async () => {
             try {
@@ -45,15 +45,17 @@ const Chat = () => {
             }
         };
         getChats();
-    }, [user._id,modalVisible]);
+    }, [user._id, modalVisible]);
 
+    socket.current = io("wss://social-space-socket.onrender.com");
     useEffect(() => {
-        socket.current = io("ws://https://social-space-socket.onrender.com");
+        socket.current = io("wss://social-space-socket.onrender.com");
         socket.current.emit("new-user-add", user._id);
         socket.current.on("get-users", (users) => {
             setOnlineUsers(users);
         });
     }, [user]);
+
 
     useEffect(() => {
         if (sendMessage !== null) {
@@ -77,12 +79,12 @@ const Chat = () => {
     const handleChatIconClick = async () => {
         try {
             const response = await getAllUser();
-        console.log(response.data.data.data)
-        // Filter out the logged-in user from the list of users
-        const filteredUsers = response.data.data.data.filter(u => u._id !== loginUser._id);
-        setUsers(filteredUsers);
-        setModalVisible(true);
-        
+            console.log(response.data.data.data)
+            // Filter out the logged-in user from the list of users
+            const filteredUsers = response.data.data.data.filter(u => u._id !== loginUser._id);
+            setUsers(filteredUsers);
+            setModalVisible(true);
+
         } catch (error) {
             console.log(error.response.data);
             message.error(error.response.data)
@@ -123,7 +125,7 @@ const Chat = () => {
                                 src={ChatIcon}
                                 style={{ height: '25px', width: '25px' }}
                                 alt="chat icon"
-                                
+
                             />
                         </div>
                     </div>
